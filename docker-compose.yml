@@ -1,0 +1,16 @@
+name: adventofcode2025
+
+services:
+  app:
+    image: adventofcode2025
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: adventofcode2025
+    volumes:
+      - .:/app:cached
+      - bundle:/usr/local/bundle
+    command: sleep infinity
+
+volumes:
+  bundle:
